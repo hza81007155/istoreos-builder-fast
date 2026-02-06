@@ -1,4 +1,4 @@
-name: 📦 Build iStoreOS 24.10.2 x86_64
+name: 📦 Build iStoreOS 24.10.x x86_64
 
 on:
   workflow_dispatch:
