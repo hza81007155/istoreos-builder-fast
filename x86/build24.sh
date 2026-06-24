@@ -17,9 +17,6 @@ else
   # 拷贝 run/x86 下所有 run 文件和ipk文件 到 extra-packages 目录
   mkdir -p extra-packages
   cp -r /tmp/store-run-repo/run/x86/* extra-packages/
-
-  # 下载 run文件到extra-packages 目录
-  curl -L --create-dirs -o extra-packages/passwall-x86.run "https://github.com/hza81007155/store-app/releases/download/passwall-x86-run/passwall-x86.run"
   
   echo "✅ Run files copied to extra-packages:"
   ls -lh extra-packages/*.run
