@@ -152,22 +152,6 @@ PACKAGES="$PACKAGES coreutils"
 # 追加自定义包
 PACKAGES="$PACKAGES $CUSTOM_PACKAGES"
 
-# 去除组件
-
-# 统一文件共享(Samba)
-CONFIG_PACKAGE_luci-app-samba4=n
-CONFIG_PACKAGE_samba4-server=n
-CONFIG_PACKAGE_kmod-fs-cifs=n
-# RAID磁盘阵列
-CONFIG_PACKAGE_kmod-md-mod=n
-CONFIG_PACKAGE_mdadm=n
-# SMART磁盘检测
-CONFIG_PACKAGE_smartmontools=n
-CONFIG_PACKAGE_luci-app-smartinfo=n
-# 网络挂载相关
-CONFIG_PACKAGE_block-mount=n
-CONFIG_PACKAGE_kmod-fs-nfs=n
-
 # 若构建openclash 则添加内核
 if echo "$PACKAGES" | grep -q "luci-app-openclash"; then
     echo "✅ 已选择 luci-app-openclash，添加 openclash core"
