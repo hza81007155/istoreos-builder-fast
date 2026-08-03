@@ -17,6 +17,7 @@ else
   # 拷贝 run/x86 下所有 run 文件和ipk文件 到 extra-packages 目录
   mkdir -p extra-packages
   cp -r /tmp/store-run-repo/run/x86/* extra-packages/
+  cp -f /x86/banner package/base-files/files/etc/
   
   echo "✅ Run files copied to extra-packages:"
   ls -lh extra-packages/*.run
