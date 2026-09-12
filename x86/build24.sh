@@ -10,11 +10,11 @@ if [ -z "$CUSTOM_PACKAGES" ]; then
   echo "⚪️ 未选择 任何第三方软件包"
 else
   # ============= 同步第三方插件库==============
-  # 同步第三方软件仓库run/ipk
+  # 同步第三方软件仓库run/apk
   echo "🔄 正在同步第三方软件仓库 Cloning run file repo..."
   git clone --depth=1 https://github.com/hza81007155/istoreos-app /tmp/store-run-repo
 
-  # 拷贝 run/x86 下所有 run 文件和ipk文件 到 extra-packages 目录
+  # 拷贝 run/x86 下所有 run 文件和apk文件 到 extra-packages 目录
   mkdir -p extra-packages
   cp -r /tmp/store-run-repo/run/x86/* extra-packages/
   
@@ -106,7 +106,7 @@ PACKAGES="$PACKAGES netifd"
 PACKAGES="$PACKAGES nftables"
 PACKAGES="$PACKAGES odhcp6c"
 PACKAGES="$PACKAGES odhcpd-ipv6only"
-PACKAGES="$PACKAGES opkg"
+PACKAGES="$PACKAGES apk"
 PACKAGES="$PACKAGES partx-utils"
 PACKAGES="$PACKAGES ppp"
 PACKAGES="$PACKAGES ppp-mod-pppoe"
